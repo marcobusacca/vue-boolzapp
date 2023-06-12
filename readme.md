@@ -10,7 +10,7 @@ Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visua
 
 SOLUZIONE MILESTONE 1:
 
-- Creare la struttura HMTL statica;
+- Creare la struttura HTML statica;
 
 - Inserire il Boilerplate vue.js in JavaScript;
 
