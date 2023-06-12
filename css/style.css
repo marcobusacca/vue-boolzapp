@@ -26,7 +26,7 @@ body{
 
         /* USER BANNER ROW */
         .banner-row{
-            height: 85px;
+            height: 80px;
             padding: 15px 20px;
             background-color: #8EDAFC;
         }
@@ -39,7 +39,7 @@ body{
 
         /* CONTACT ROW */
         .contact-row{
-            height: calc(100% - 210px);
+            height: calc(100% - 205px);
             overflow-y: scroll;
             cursor: pointer;
         }
