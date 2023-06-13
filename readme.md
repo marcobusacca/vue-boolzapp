@@ -80,3 +80,14 @@ SOLUZIONE MILESTONE 3:
             - Ripristinare la Variabile userMessage;
 
     - Aggiungere v-on:keyup.enter all'input per l'invio di un nuovo messaggio per richiamare la funzione (newMessage).
+
+
+2
+
+    - Inserire dentro la funzione (newMessage) una Timing Function setTimeOut che viene attivata dopo 1 secondo:
+
+            - Creare un nuovo oggetto per ogni messaggio inviato dall'utente;
+
+                - message = ok;
+
+            - Pushare il nuovo oggetto dentro l'array Message del Contatto Attuale.
