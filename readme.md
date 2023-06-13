@@ -46,6 +46,7 @@ SOLUZIONE MILESTONE 2:
 
 
 2
+
     - Creare la Funzione (changeChat(index));
 
     - Richiamare la funzione con v-on:click sulle Col dei Contatti.
