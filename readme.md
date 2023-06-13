@@ -93,3 +93,35 @@ SOLUZIONE MILESTONE 3:
             - Pushare il nuovo oggetto dentro l'array Message del Contatto Attuale;
 
     - Richiamare dentro la funzione newMessage la funzione autoMessage.
+    
+
+/******************************************************************************************************/
+
+MILESTONE 4:
+
+    Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina).
+
+
+SOLUZIONE MILESTONE 4:
+
+    - Aggiungere una Variabile (userSearch) dove inserire la ricerca dell'utente;
+
+    - Aggiungere v-model all'input per la ricerca di un contatto;
+
+    - Aggiungere alla Col dei Contatti v-show (mostrare il contatto solo se la variabile visible è UGUALE a true);
+
+    - Creare la funzione (searchFilter()):
+
+        - Inserire dentro una variabile la ricerca dell'utente (userSearch) e usare toLowerCase();
+
+        - Creare un CICLO FOR EACH che scorre tutti i contatti dell'array contacts:
+
+            - Inserire dentro una variabile l'elemento "name" di ogni contatto e usare toLowerCase();
+
+            - ? SE il nome del contatto INCLUDE la stringa ricercata dall'utente, ALLORA:
+
+                - Settare la variabile visible del contatto su TRUE;
+
+            - ALTRIMENTI : - Settare la variabile visible del contatto su FALSE;
+
+    - Richiamare la funzione searchFilter() con v-on:input nell'input per la ricerca di un contatto.

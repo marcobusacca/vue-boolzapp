@@ -9,9 +9,11 @@ createApp({
     data(){
         return{
             // DEFINIZIONE VARIABILI VUE.JS
-            activeChat : 0,
+            activeChat  : 0,
 
             userMessage : '',
+
+            userSearch  : '',
 
             // CONTACTS ARRAY
             contacts: [
@@ -23,19 +25,19 @@ createApp({
                     // CONTACT MESSAGES ARRAY
                     messages: [
                         {
-                            date: '10/01/2020 15:30:55',
-                            message: 'Hai portato a spasso il cane?',
-                            status: 'sent'
+                            date    : '10/01/2020 15:30:55',
+                            message : 'Hai portato a spasso il cane?',
+                            status  : 'sent'
                         },
                         {
-                            date: '10/01/2020 15:50:00',
-                            message: 'Ricordati di stendere i panni',
-                            status: 'sent'
+                            date    : '10/01/2020 15:50:00',
+                            message : 'Ricordati di stendere i panni',
+                            status  : 'sent'
                         },
                         {
-                            date: '10/01/2020 16:15:22',
-                            message: 'Tutto fatto!',
-                            status: 'received'
+                            date    : '10/01/2020 16:15:22',
+                            message : 'Tutto fatto!',
+                            status  : 'received'
                         }
                     ],
                     visible : true,
@@ -48,19 +50,19 @@ createApp({
                     // CONTACT MESSAGES ARRAY
                     messages: [
                         {
-                            date: '20/03/2020 16:30:00',
-                            message: 'Ciao come stai?',
-                            status: 'sent'
+                            date    : '20/03/2020 16:30:00',
+                            message : 'Ciao come stai?',
+                            status  : 'sent'
                         },
                         {
-                            date: '20/03/2020 16:30:55',
-                            message: 'Bene grazie! Stasera ci vediamo?',
-                            status: 'received'
+                            date    : '20/03/2020 16:30:55',
+                            message : 'Bene grazie! Stasera ci vediamo?',
+                            status  : 'received'
                         },
                         {
-                            date: '20/03/2020 16:35:00',
-                            message: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                            status: 'sent'
+                            date    : '20/03/2020 16:35:00',
+                            message : 'Mi piacerebbe ma devo andare a fare la spesa.',
+                            status  : 'sent'
                         }
                     ],
                     visible : true,
@@ -73,19 +75,19 @@ createApp({
                     // CONTACT MESSAGES ARRAY
                     messages: [
                         {
-                            date: '28/03/2020 10:10:40',
-                            message: 'La Marianna va in campagna',
-                            status: 'received'
+                            date    : '28/03/2020 10:10:40',
+                            message : 'La Marianna va in campagna',
+                            status  : 'received'
                         },
                         {
-                            date: '28/03/2020 10:20:10',
-                            message: 'Sicuro di non aver sbagliato chat?',
-                            status: 'sent'
+                            date    : '28/03/2020 10:20:10',
+                            message : 'Sicuro di non aver sbagliato chat?',
+                            status  : 'sent'
                         },
                         {
-                            date: '28/03/2020 16:15:22',
-                            message: 'Ah scusa!',
-                            status: 'received'
+                            date    : '28/03/2020 16:15:22',
+                            message : 'Ah scusa!',
+                            status  : 'received'
                         }
                     ],
                     visible : true,
@@ -98,14 +100,14 @@ createApp({
                     // CONTACT MESSAGES ARRAY          
                     messages: [
                         {
-                            date: '10/01/2020 15:30:55',
-                            message: 'Lo sai che ha aperto una nuova pizzeria?',
-                            status: 'sent'
+                            date    : '10/01/2020 15:30:55',
+                            message : 'Lo sai che ha aperto una nuova pizzeria?',
+                            status  : 'sent'
                         },
                         {
-                            date: '10/01/2020 15:50:00',
-                            message: 'Si, ma preferirei andare al cinema',
-                            status: 'received'
+                            date    : '10/01/2020 15:50:00',
+                            message : 'Si, ma preferirei andare al cinema',
+                            status  : 'received'
                         }
                     ],
                     visible : true,
@@ -118,14 +120,14 @@ createApp({
                     // CONTACT MESSAGES ARRAY
                     messages: [
                         {
-                            date: '10/01/2020 15:30:55',
-                            message: 'Ricordati di chiamare la nonna',
-                            status: 'sent'
+                            date    : '10/01/2020 15:30:55',
+                            message : 'Ricordati di chiamare la nonna',
+                            status  : 'sent'
                         },
                         {
-                            date: '10/01/2020 15:50:00',
-                            message: 'Va bene, stasera la sento',
-                            status: 'received'
+                            date    : '10/01/2020 15:50:00',
+                            message : 'Va bene, stasera la sento',
+                            status  : 'received'
                         }
                     ],
                     visible : true,
@@ -138,19 +140,19 @@ createApp({
                     // CONTACT MESSAGES ARRAY
                     messages: [
                         {
-                            date: '10/01/2020 15:30:55',
-                            message: 'Ciao Claudia, hai novità?',
-                            status: 'sent'
+                            date    : '10/01/2020 15:30:55',
+                            message : 'Ciao Claudia, hai novità?',
+                            status  : 'sent'
                         },
                         {
-                            date: '10/01/2020 15:50:00',
-                            message: 'Non ancora',
-                            status: 'received'
+                            date    : '10/01/2020 15:50:00',
+                            message : 'Non ancora',
+                            status  : 'received'
                         },
                         {
-                            date: '10/01/2020 15:51:00',
-                            message: 'Nessuna nuova, buona nuova',
-                            status: 'sent'
+                            date    : '10/01/2020 15:51:00',
+                            message : 'Nessuna nuova, buona nuova',
+                            status  : 'sent'
                         }
                     ],
                     visible : true,
@@ -163,14 +165,14 @@ createApp({
                     // CONTACT MESSAGES ARRAY
                     messages: [
                         {
-                            date: '10/01/2020 15:30:55',
-                            message: 'Fai gli auguri a Martina che è il suo compleanno!',
-                            status: 'sent'
+                            date    : '10/01/2020 15:30:55',
+                            message : 'Fai gli auguri a Martina che è il suo compleanno!',
+                            status  : 'sent'
                         },
                         {
-                            date: '10/01/2020 15:50:00',
-                            message: 'Grazie per avermelo ricordato, le scrivo subito!',
-                            status: 'received'
+                            date    : '10/01/2020 15:50:00',
+                            message : 'Grazie per avermelo ricordato, le scrivo subito!',
+                            status  : 'received'
                         }
                     ],
                     visible : true,
@@ -183,19 +185,19 @@ createApp({
                     // CONTACT MESSAGES ARRAY
                     messages: [
                         {
-                            date: '10/01/2020 15:30:55',
-                            message: 'Ciao, andiamo a mangiare la pizza stasera?',
-                            status: 'received'
+                            date    : '10/01/2020 15:30:55',
+                            message : 'Ciao, andiamo a mangiare la pizza stasera?',
+                            status  : 'received'
                         },
                         {
-                            date: '10/01/2020 15:50:00',
-                            message: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
-                            status: 'sent'
+                            date    : '10/01/2020 15:50:00',
+                            message : 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
+                            status  : 'sent'
                         },
                         {
-                            date: '10/01/2020 15:51:00',
-                            message: 'OK!!',
-                            status: 'received'
+                            date    : '10/01/2020 15:51:00',
+                            message : 'OK!!',
+                            status  : 'received'
                         }
                     ],
                     visible : true,
@@ -217,9 +219,9 @@ createApp({
                 
                 // CREO UN NUOVO OGGETTO DA PUSHARE NELL'ARRAY MESSAGES DEL CONTATTO ATTIVO
                 let object = {
-                    date: 'oggi',
-                    message: this.userMessage,
-                    status: 'sent'
+                    date    : 'oggi',
+                    message : this.userMessage,
+                    status  : 'sent'
                 };
 
                 // PUSHO IL NUOVO OGGETTO NELL'ARRAY MESSAGES DEL CONTATTO ATTIVO
@@ -240,14 +242,38 @@ createApp({
     
                 // CREO UN NUOVO OGGETTO DA PUSHARE NELL'ARRAY MESSAGES DEL CONTATTO ATTIVO
                 let object = {
-                    date: 'oggi',
-                    message: 'ok',
-                    status: 'received'
+                    date    : 'oggi',
+                    message : 'ok',
+                    status  : 'received'
                 };
     
                 // PUSHO IL NUOVO OGGETTO NELL'ARRAY MESSAGES DEL CONTATTO ATTIVO
                 this.contacts[this.activeChat].messages.push(object);
             }, 1000);
-        }
+        },
+
+        // QUANDO L'UTENTE SCRIVE NELLA BARRA DI RICERCA CONTATTI, VIENE FILTRATO IL RISULTATO IN BASE A COSA HA SCRITTO L'UTENTE
+        searchFilter(){
+
+            // INSERISCO DENTRO UNA VARIABILE LA STRINGA INSERITA DALL'UTENTE NELL'INPUT DI RICERCA CONTATTO
+            let contactSearched = this.userSearch.toLowerCase(); 
+
+            // CICLO OGNI ELEMENTO DELL'ARRAY PER VEDERE SE CORRISPONDE CON LA RICERCA DELL'UTENTE
+            this.contacts.forEach((contact) => {
+                // INSERISCO DENTRO UNA VARIABILE IL NOME DI OGNI CONTATTO DELL'ARRAY CONTACTS
+                let contactName = contact.name.toLowerCase();
+
+                // CONTROLLO SE IL NOME INCLUDE LA STRINGA RICERCATA DALL'UTENTE
+                if (contactName.includes(contactSearched)){
+
+                    // SE IL NOME INCLUDE LA STRINGA RICERCATA DALL'UTENTE, SETTO LA VARIABILE VISIBLE IN TRUE
+                    contact.visible = true;
+
+                } else{
+                    // SE IL NOME NON INCLUDE LA STRINGA RICERCATA DALL'UTENTE, SETTO LA VARIABILE VISIBLE IN FALSE
+                    contact.visible = false;
+                }
+            });
+        },
     }
 }).mount('#app'); // COLLEGO L'APP VUE.JS AL DOM HTML
