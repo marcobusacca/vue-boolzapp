@@ -42,4 +42,10 @@ SOLUZIONE MILESTONE 2:
 
     - Usare il v-bind per visualizzare la classi "message-content-sent" e "message-sent" se status è UGUALE a 'sent';
 
-    - Usare il v-show per visualizzare tutti i messaggi del contatto selezionato;
+    - Usare il v-show per visualizzare tutti i messaggi del contatto selezionato.
+
+
+2
+    - Creare la Funzione (changeChat(index));
+
+    - Richiamare la funzione con v-on:click sulle Col dei Contatti.
