@@ -9,11 +9,14 @@ createApp({
     data(){
         return{
             // DEFINIZIONE VARIABILI VUE.JS
+            activeChat : 0,
+
+            // CONTACTS ARRAY
             contacts: [
                 {
                     // CONTACT INFO
-                    name: 'Michele',
-                    avatar: './img/avatar_1.jpg',
+                    name    : 'Michele',
+                    avatar  : './img/avatar_1.jpg',
 
                     // CONTACT MESSAGES ARRAY
                     messages: [
@@ -33,12 +36,12 @@ createApp({
                             status: 'received'
                         }
                     ],
-                    visible: true,
+                    visible : true,
                 },
                 {
                     // CONTACT INFO
-                    name: 'Fabio',
-                    avatar: './img/avatar_2.jpg',
+                    name    : 'Fabio',
+                    avatar  : './img/avatar_2.jpg',
 
                     // CONTACT MESSAGES ARRAY
                     messages: [
@@ -58,12 +61,13 @@ createApp({
                             status: 'sent'
                         }
                     ],
-                    visible: true,
+                    activeChat  : true,
+                    visible : true,
                 },
                 {
                     // CONTACT INFO
-                    name: 'Samuele',
-                    avatar: './img/avatar_3.jpg',
+                    name    : 'Samuele',
+                    avatar  : './img/avatar_3.jpg',
 
                     // CONTACT MESSAGES ARRAY
                     messages: [
@@ -83,12 +87,12 @@ createApp({
                             status: 'received'
                         }
                     ],
-                    visible: true,
+                    visible : true,
                 },
                 {
                     // CONTACT INFO
-                    name: 'Alessandro B.',
-                    avatar: './img/avatar_4.jpg',
+                    name    : 'Alessandro B.',
+                    avatar  : './img/avatar_4.jpg',
 
                     // CONTACT MESSAGES ARRAY          
                     messages: [
@@ -103,12 +107,12 @@ createApp({
                             status: 'received'
                         }
                     ],
-                    visible: true,
+                    visible : true,
                 },
                 {
                     // CONTACT INFO
-                    name: 'Alessandro L.',
-                    avatar: './img/avatar_5.jpg',
+                    name    : 'Alessandro L.',
+                    avatar  : './img/avatar_5.jpg',
 
                     // CONTACT MESSAGES ARRAY
                     messages: [
@@ -123,12 +127,12 @@ createApp({
                             status: 'received'
                         }
                     ],
-                    visible: true,
+                    visible : true,
                 },
                 {
                     // CONTACT INFO
-                    name: 'Claudia',
-                    avatar: './img/avatar_6.jpg',
+                    name    : 'Claudia',
+                    avatar  : './img/avatar_6.jpg',
 
                     // CONTACT MESSAGES ARRAY
                     messages: [
@@ -148,12 +152,12 @@ createApp({
                             status: 'sent'
                         }
                     ],
-                    visible: true,
+                    visible : true,
                 },
                 {
                     // CONTACT INFO
-                    name: 'Federico',
-                    avatar: './img/avatar_7.jpg',
+                    name    : 'Federico',
+                    avatar  : './img/avatar_7.jpg',
 
                     // CONTACT MESSAGES ARRAY
                     messages: [
@@ -168,12 +172,12 @@ createApp({
                             status: 'received'
                         }
                     ],
-                    visible: true,
+                    visible : true,
                 },
                 {
                     // CONTACT INFO
-                    name: 'Davide',
-                    avatar: './img/avatar_8.jpg',
+                    name    : 'Davide',
+                    avatar  : './img/avatar_8.jpg',
 
                     // CONTACT MESSAGES ARRAY
                     messages: [
@@ -193,8 +197,8 @@ createApp({
                             status: 'received'
                         }
                     ],
-                    visible: true,
-                }
+                    visible : true,
+                },
             ]            
         }
     },

@@ -34,10 +34,12 @@ SOLUZIONE MILESTONE 2:
 
 1
 
-    - Inserire nell'Array Contacts, in ogni Contact, una Variabile per Definire se la chat è attiva o meno (activeChat);
+    - Inserire una Variabile per Definire qual è l'indice della chat attiva (activeChat);
 
-    - Usare il v-bind per visualizzare la classe "contact-selected" se activeChat è true;
+    - Usare il v-bind per visualizzare la classe "contact-selected" se activeChat è UGUALE all'indice dell'elemento attuale;
 
     - Usare v-for per visualizzare tutti i messaggi;
+
+    - Usare il v-bind per visualizzare la classi "message-content-sent" e "message-sent" se status è UGUALE a 'sent';
 
     - Usare il v-show per visualizzare tutti i messaggi del contatto selezionato;
