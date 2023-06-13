@@ -71,10 +71,12 @@ SOLUZIONE MILESTONE 3:
 
     - Creare la funzione (newMessage);
 
-        - Creare un nuovo oggetto per ogni messaggio inviato dall'utente;
+        - ? SE l'utente non ha lasciato il campo vuoto, ALLORA:
 
-        - Pushare il nuovo oggetto dentro l'array Message del Contatto Attuale;
+            - Creare un nuovo oggetto per ogni messaggio inviato dall'utente;
 
-        - Ripristinare la Variabile userMessage;
+            - Pushare il nuovo oggetto dentro l'array Message del Contatto Attuale;
+
+            - Ripristinare la Variabile userMessage;
 
     - Aggiungere v-on:keyup.enter all'input per l'invio di un nuovo messaggio per richiamare la funzione (newMessage).
