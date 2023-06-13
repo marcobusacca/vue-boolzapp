@@ -61,7 +61,6 @@ createApp({
                             status: 'sent'
                         }
                     ],
-                    activeChat  : true,
                     visible : true,
                 },
                 {
