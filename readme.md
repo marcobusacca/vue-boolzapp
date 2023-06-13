@@ -84,10 +84,12 @@ SOLUZIONE MILESTONE 3:
 
 2
 
-    - Inserire dentro la funzione (newMessage) una Timing Function setTimeOut che viene attivata dopo 1 secondo:
+    - Creare una nuova Funzione (autoMessage) con una Timing Function setTimeOut che viene attivata dopo 1 secondo:
 
             - Creare un nuovo oggetto per ogni messaggio inviato dall'utente;
 
                 - message = ok;
 
-            - Pushare il nuovo oggetto dentro l'array Message del Contatto Attuale.
+            - Pushare il nuovo oggetto dentro l'array Message del Contatto Attuale;
+
+    - Richiamare dentro la funzione newMessage la funzione autoMessage.
