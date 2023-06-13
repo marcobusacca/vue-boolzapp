@@ -50,3 +50,31 @@ SOLUZIONE MILESTONE 2:
     - Creare la Funzione (changeChat(index));
 
     - Richiamare la funzione con v-on:click sulle Col dei Contatti.
+    
+
+/******************************************************************************************************/
+
+MILESTONE 3:
+
+1 - Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde;
+
+2 - Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
+
+
+SOLUZIONE MILESTONE 3:
+
+1
+
+    - Aggiungere una Variabile (userMessage) dove inserire il messaggio dell'utente;
+
+    - Aggiungere v-model all'input per l'invio di un nuovo messaggio;
+
+    - Creare la funzione (newMessage);
+
+        - Creare un nuovo oggetto per ogni messaggio inviato dall'utente;
+
+        - Pushare il nuovo oggetto dentro l'array Message del Contatto Attuale;
+
+        - Ripristinare la Variabile userMessage;
+
+    - Aggiungere v-on:keyup.enter all'input per l'invio di un nuovo messaggio per richiamare la funzione (newMessage).
