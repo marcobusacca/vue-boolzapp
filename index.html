@@ -88,7 +88,7 @@
                         <!-- Left Contact Row -->
                         <div class="row contact-row">
                             <!-- Contact Col -->
-                            <div class="contact-col" :class=" activeChat === index ? 'contact-selected' : '' " v-for="(contact, index) in contacts">
+                            <div class="contact-col" :class=" activeChat === index ? 'contact-selected' : '' " v-for="(contact, index) in contacts" @click="changeChat(index)">
                                 <!-- Contact Info -->
                                 <div class="contact-info">
                                     <!-- Contact Logo -->
