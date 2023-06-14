@@ -20,12 +20,16 @@ createApp({
             userSearch  : '',
 
             // OGGETTO PER MESSAGE DROPDOWN
-            messageDropdown:{
+            messageDropdown: {
                 index   : 0,
                 show    : false,
             },
 
-            // ULTIMO MESSAGGIO DI OGNI CONTATTO
+            // USER DATA OBJECT
+            userData: {
+                name    : 'Sofia',
+                avatar  : './img/avatar_io.jpg'
+            },
 
             // CONTACTS ARRAY
             contacts: [
@@ -312,7 +316,7 @@ createApp({
 
         // FUNZIONA CHE STAMPA IL TESTO DELL'ULTIMO MESSAGGIO DELL'ARRAY MESSAGES DI OGNI CONTATTO
         getLastMessage(contact) {
-            
+
             // RECUPERO L'ARRAY MESSAGES DEL CONTATTO ATTUALE
             const messages = contact.messages;
 

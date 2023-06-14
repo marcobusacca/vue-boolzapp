@@ -41,10 +41,10 @@
                                 <!-- User Logo -->
                                 <div class="img-logo user-logo">
                                     <!-- User Image -->
-                                    <img src="./img/avatar_io.jpg" alt="user-logo">
+                                    <img :src="userData.avatar" alt="user-logo">
                                 </div>
                                 <!-- User Name -->
-                                <span class="fw-500">Sofia</span>
+                                <span class="fw-500" v-text="userData.name"></span>
                             </div>
                             <!-- User Button Col -->
                             <div class="user-button-col">
