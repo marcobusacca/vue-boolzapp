@@ -154,12 +154,31 @@
                             <!-- Chat Col -->
                             <div class="chat-col" v-for="(contact, index) in contacts" v-show="activeChat === index">
                                 <!-- Message -->
-                                <div class="message-content" :class="messages.status === 'sent' ? 'message-content-sent' : ''" v-for="messages in contact.messages">
+                                <div class="message-content" :class="messages.status === 'sent' ? 'message-content-sent' : ''" v-for="(messages, index) in contact.messages">
                                     <div class="message" :class=" messages.status === 'sent' ? 'message-sent' : '' ">
-                                        <!-- Message Text -->
-                                        <span class="message-text" v-text="messages.message"></span>
-                                        <!-- Message Time -->
-                                        <span class="message-time txt-grey" v-text="messages.date"></span>
+                                        <!-- Message Info -->
+                                        <div class="message-info">
+                                            <!-- Message Text -->
+                                            <div class="message-text" v-text="messages.message"></div>
+                                            <!-- Message Time -->
+                                            <div class="message-time txt-grey" v-text="messages.date"></div>
+                                        </div>
+                                        <!-- Message Dropdown -->
+                                        <div class="message-dropdown" @click="showMessageDropdown(index)" @mouseleave="leaveMessageDropdown()">
+                                            <!-- Dropdown Icon Button -->
+                                            <i class="fas fa-angle-down"></i>
+                                            <!-- Dropdown Menu -->
+                                            <div class="dropdown-menu" v-if="messageDropdown.show">
+                                                <!-- Message Info -->
+                                                <div class="dropdown-info">
+                                                    <span>Info Messaggio</span>
+                                                </div>
+                                                <!-- Delete Message -->
+                                                <div class="dropdown-delete" @click="deleteMessage(index)">
+                                                    <span>Cancella Messaggio</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

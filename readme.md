@@ -144,6 +144,34 @@ SOLUZIONE MILESTONE 5:
 
     - Inserire dentro il menu a tendina la voce "Cancella Messaggio";
 
+    - Creare un Oggetto in Return (MessageDropdown):
+
+        - index : 0,
+
+        - show  : false,
+
+    - Creare la funzione showMessageDropdown(index):
+
+        - Assegnare l'index del messaggio cliccato all'index di MessageDropdown;
+
+        - Settare in TRUE la variabile show di MessageDropdown;
+
+    - Creare la funzione leaveMessageDropdown():
+
+        - Assegnare 0 all'index di MessageDropdown;
+
+        - Settare in FALSE la variabile show di MessageDropdown;
+
+    - Richiamare le due funzioni create nel container "message-dropdown":
+
+        - @click per showMessageDropdown(index);
+
+        - @mouseleave per leaveMessageDropdown();
+
+    - Usare v-if sul container del Dropdown Menu per mostrarlo SOLO SE la variabile show è UGUALE a TRUE;
+
     - Creare la funzione deleteMessage(index):
 
-        - Usare la funzione splice(index, 1) sul Messaggio Cliccato per cancellarlo.
+        - Usare la funzione splice(index, 1) sul Messaggio Cliccato per cancellarlo;
+
+    - Richiamare la funzione deleteMessage(index) con @click sul container di "dropdown-delete".

@@ -9,11 +9,21 @@ createApp({
     data(){
         return{
             // DEFINIZIONE VARIABILI VUE.JS
+
+            // INDEX CHAT ATTIVA
             activeChat  : 0,
 
+            // INPUT TEXT INVIA MESSAGGIO
             userMessage : '',
 
+            // INPUT TEXT BARRA RICERCA CONTATTO
             userSearch  : '',
+
+            // OGGETTO PER MESSAGE DROPDOWN
+            messageDropdown:{
+                index   : 0,
+                show    : false,
+            },
 
             // CONTACTS ARRAY
             contacts: [
@@ -275,5 +285,27 @@ createApp({
                 }
             });
         },
+
+        // QUANDO L'UTENTE CLICCA SULL'ICONA DEL MESSAGE DROPDOWN, VIENE MOSTRATO IL DROPDOWN MENU
+        showMessageDropdown(index){
+            // ASSEGNO L'INDEX DEL MESSAGGIO CLICCATO ALL'INDEX DI MESSAGE DROPDOWN
+            this.messageDropdown.index = index;
+            // ASSEGNO TRUE ALLA VARIABILE SHOW DI MESSAGE DROPDOWN
+            this.messageDropdown.show = true;
+        },
+
+        // QUANDO L'UTENTE TOGLIE IL MOUSE DAL MESSAGE DROPDOWN, VIENE DISATTIVATO IL DROPDOWN MENU
+        leaveMessageDropdown(){
+            // ASSEGNO IL VALORE "0" ALL'INDEX DI MESSAGE DROPDOWN
+            this.messageDropdown.index = 0;
+            // ASSEGNO FALSE ALLA VARIABILE SHOW DI MESSAGE DROPDOWN
+            this.messageDropdown.show = false;
+        },
+
+        // QUANDO L'UTENTE CLICCA SU "CANCELLA MESSAGGIO", CANCELLO IL MESSAGGIO SELEZIONATO DALL'ARRAY MESSAGES DEL CONTATTO ATTUALE
+        deleteMessage(index){
+            // CANCELLO IL MESSAGGIO CLICCATO TRAMITE LA FUNZIONE SPLICE
+            this.contacts[this.activeChat].messages.splice(index, 1);
+        }
     }
 }).mount('#app'); // COLLEGO L'APP VUE.JS AL DOM HTML
