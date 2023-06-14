@@ -120,10 +120,10 @@ body{
         }
 
         .search-col .search-button{
+            width: 70px;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 70px;
             background-color: #fff;
             cursor: pointer;
         }
@@ -135,24 +135,36 @@ body{
 
         /* CONTACT COL */
         .contact-col{
+            width: 100%;
             display: flex;
             justify-content: space-between;
-            width: 100%;
             padding: 10px 15px;
             border-top: 1px solid rgba(128, 128, 128, 0.295);
+            position: relative;
         }
 
         .contact-col .contact-info{
+            width: 100%;
             display: flex;
         }
 
         .contact-info .contact-text{
+            width: calc(100% - 65px);
             padding: 8px 10px;
         }
 
-        .contact-info .contact-text span{
+        .contact-text span{
+            width: 100%;
             font-size: 13px;
             margin-top: 2px;
+            word-wrap: break-word;
+        }
+
+        .contact-time{
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            padding: 10px;
         }
 
         .contact-time span{
@@ -193,11 +205,11 @@ body{
 
         /* EMOJI COL */
         .emoji-col{
+            width: 50px;
+            height: 50px;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 50px;
-            height: 50px;
             cursor: pointer;
         }
 
@@ -210,17 +222,17 @@ body{
             width: calc(100% - 40px);
             margin: 0 20px;
             padding: 15px 10px;
-            border: none;
             border-radius: 5px;
+            border: none;
         }
 
         /* VOICE AUDIO COL */
         .voice-audio-col{
+            width: 50px;
+            height: 50px;
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 50px;
-            height: 50px;
             cursor: pointer;
         }
     /* FINE RIGHT MAIN COL */
@@ -231,8 +243,8 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 50%;
         background-color: #fff;
+        border-radius: 50%;
         cursor: pointer;
     }
 
@@ -259,6 +271,85 @@ body{
     }
 /* FINE IMG LOGO */
 
+/* MESSAGE */
+    .message-content{
+        width: calc(100% - 100px);
+        margin: 20px 50px;
+        display: flex;
+    }
+
+    .message{
+        width: 40%;
+        height: 100%;
+        border-radius: 10px;
+        background-color: #fff;
+        position: relative;
+    }
+
+    /* MESSAGE SENT */
+        .message-content-sent{
+            justify-content: flex-end;
+        }
+
+        .message-sent{
+            background-color: #D5F9BA;
+        }
+    /* FINE MESSAGE SENT */
+
+    /* MESSAGE INFO */
+        .message-info{
+            width: 100%;
+            padding: 10px;
+            padding-bottom: 5px;
+        }
+
+        .message-text{
+            font-size: 16px;
+            padding: 10px;
+            word-wrap: break-word;
+        }
+
+        .message-time{
+            font-size: 11px;
+            text-align: end;
+        }
+    /* FINE MESSAGE INFO */
+
+    /* MESSAGE DROPDOWN */
+        .message-dropdown{
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            z-index: 100;
+            padding: 10px;
+            text-align: end;
+            cursor: pointer;
+            display: none;
+        }
+
+        .message-dropdown .dropdown-menu{
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 5px grey;
+        }
+
+        .dropdown-menu *{
+            padding: 10px;
+        }
+
+        /* DROPDOWN HOVER */
+        .message:hover .message-dropdown{
+            display: block;
+        }
+
+        .dropdown-info:hover,
+        .dropdown-delete:hover{
+            background-color: rgba(128, 128, 128, 0.196);
+        }
+    /* FINE MESSAGE DROPDOWN */
+/* FINE MESSAGE */
+
+
 /* UTILITIES */
     .container{
         max-width: 1500px;
@@ -277,84 +368,6 @@ body{
             background-color: rgba(128, 128, 128, 0.189);
         }
     /* FINE CONTACT SELECTED */
-
-    /* MESSAGE */
-        .message-content{
-            display: flex;
-            width: calc(100% - 100px);
-            margin: 20px 50px;
-        }
-
-        .message{
-            width: 40%;
-            height: 100%;
-            border-radius: 10px;
-            background-color: #fff;
-            position: relative;
-        }
-
-        /* MESSAGE INFO */
-            .message-info{
-                width: 100%;
-                padding: 10px;
-                padding-bottom: 5px;
-            }
-
-            .message-text{
-                font-size: 16px;
-                padding: 10px;
-            }
-
-            .message-time{
-                font-size: 11px;
-                text-align: end;
-            }
-        /* FINE MESSAGE INFO */
-
-        /* MESSAGE DROPDOWN */
-            .message-dropdown{
-                display: none;
-                position: absolute;
-                top: 0%;
-                right: 0%;
-                padding: 10px;
-                text-align: end;
-                cursor: pointer;
-                z-index: 100;
-            }
-
-            .message-dropdown .dropdown-menu{
-                background-color: #fff;
-                box-shadow: 0 0 5px grey;
-                padding: 10px;
-            }
-
-            .dropdown-menu *{
-                padding: 10px;
-            }
-
-            /* DROPDOWN HOVER */
-            .message:hover .message-dropdown{
-                display: block;
-            }
-
-            .dropdown-info:hover,
-            .dropdown-delete:hover{
-                background-color: rgba(128, 128, 128, 0.196);
-            }
-        /* FINE MESSAGE DROPDOWN */
-
-    /* FINE MESSAGE */
-
-    /* MESSAGE SENT */
-        .message-content-sent{
-            justify-content: flex-end;
-        }
-
-        .message-sent{
-            background-color: #D5F9BA;
-        }
-    /* FINE MESSAGE SENT */
 
     /* FONT WEIGHT */
         .fw-500{

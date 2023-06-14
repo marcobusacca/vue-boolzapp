@@ -235,7 +235,7 @@ createApp({
                 
                 // CREO UN NUOVO OGGETTO DA PUSHARE NELL'ARRAY MESSAGES DEL CONTATTO ATTIVO
                 let object = {
-                    date    : 'oggi',
+                    date    : this.dateTime(),
                     message : this.userMessage,
                     status  : 'sent'
                 };
@@ -258,7 +258,7 @@ createApp({
     
                 // CREO UN NUOVO OGGETTO DA PUSHARE NELL'ARRAY MESSAGES DEL CONTATTO ATTIVO
                 let object = {
-                    date    : 'oggi',
+                    date    : this.dateTime(),
                     message : 'ok',
                     status  : 'received'
                 };
@@ -336,6 +336,67 @@ createApp({
             }
             // SE L'ARRAY MESSAGES è VUOTO RITORNO UNA STRINGA
             return 'Nessun messaggio';
+        },
+
+        // FUNZIONA CHE STAMPA L'ULTIMA DATA DELL'ARRAY MESSAGES DI OGNI CONTATTO
+        getLastDate(contact){
+
+            // RECUPERO L'ARRAY MESSAGES DEL CONTATTO ATTUALE
+            const messages = contact.messages;
+
+            // CONTROLLO SE L'ARRAY MESSAGES NON è VUOTO
+            if (messages.length > 0) {
+
+                // RECUPERO L'ULTIMO OGGETTO DELL'ARRAY MESSAGES
+                const lastMessage = messages[messages.length - 1];
+
+                // STAMPO LA VARIABILE "DATE" DELL'ULTIMO OGGETTO DELL'ARRAY MESSAGES
+                return lastMessage.date;
+            }
+            // SE L'ARRAY MESSAGES è VUOTO RITORNO UNA STRINGA VUOTA
+            return '';
+        },
+
+        // FUNZIONE CHE STAMPA L'ULTIMA DATA DELL'ARRAY MESSAGES DEL CONTATTO SELEZIONATO
+        getLastAccess(){
+
+            // RECUPERO L'ARRAY MESSAGES DEL CONTATTO SELEZIONATO
+            const messages = this.contacts[this.activeChat].messages;
+
+            // CONTROLLO SE L'ARRAY MESSAGES NON è VUOTO
+            if (messages.length > 0){
+
+                // DEFINISCO LA VARIABILE LAST_CONTACT_MESSAGE
+                let lastContactMessage;
+
+                // CICLO OGNI OGGETTO DELL'ARRAY MESSAGES
+                messages.forEach((message) =>{
+
+                    // SE IL MESSAGGIO è STATO MANDATO DAL CONTATTO
+                    if(message.status === 'received'){
+
+                        // SALVO LA VARIABILE "DATE" DELL'ULTIMO OGGETTO DELL'ARRAY MESSAGES CON STATUS RECEIVED DENTRO LAST_CONTACT_MESSAGE
+                        lastContactMessage = message.date;
+                    }
+                })
+                // STAMPO LA VARIABILE "DATE" DELL'ULTIMO OGGETTO DELL'ARRAY MESSAGES CON STATUS RECEIVED
+                return lastContactMessage;
+            }
+            // SE L'ARRAY MESSAGES è VUOTO RITORNO UNA STRINGA VUOTA
+            return '';
+        },
+
+        // FUNZIONE CHE RECUPERA LA DATA ATTUALE CON LUXON
+        dateTime(){
+
+            // RECUPERO LA DATA DA LUXON
+            const date = luxon.DateTime;
+
+            // FORMATTO LA DATA IN TEMPO REALE
+            let todayDate = date.now().setLocale('it').toLocaleString(date.DATETIME_SHORT_WITH_SECONDS);
+
+            // RITORNO LA DATA IN TEMPO REALE
+            return todayDate;
         },
     }
 }).mount('#app'); // COLLEGO L'APP VUE.JS AL DOM HTML

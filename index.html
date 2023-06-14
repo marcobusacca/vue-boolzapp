@@ -19,6 +19,9 @@
         <!-- Vue.js CDN -->
         <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
+        <!-- Luxon CDN -->
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.3.0/luxon.min.js" integrity="sha512-KKbQg5o92MwtJKR9sfm/HkREzfyzNMiKPIQ7i7SZOxwEdiNCm4Svayn2DBq7MKEdrqPJUOSIpy1v6PpFlCQ0YA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
         <!-- Collegamento a "script.js" -->
         <script defer type="text/javascript" src="./js/script.js"></script>
 
@@ -109,7 +112,7 @@
                                 </div>
                                 <!-- Contact Time -->
                                 <div class="contact-time">
-                                    <span class="txt-grey fw-500">12:00</span>
+                                    <span class="txt-grey fw-500" v-text="getLastDate(contact)"></span>
                                 </div>
                             </div>
                         </div>
@@ -135,7 +138,7 @@
                                         <!-- Contact Name -->
                                         <h4 class="fw-500" v-text="contacts[activeChat].name"></h4>
                                         <!-- Contact Last Access -->
-                                        <span class="txt-grey fw-500">Ultimo accesso oggi alle 12:00</span>
+                                        <span class="txt-grey fw-500">Ultimo accesso {{getLastAccess()}}</span>
                                     </div>
                                 </div>
                             </div>

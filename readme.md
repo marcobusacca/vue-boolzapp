@@ -194,3 +194,18 @@ SOLUZIONE MILESTONE 5:
             - ALTRIMENTI: Stampare (return) la Variabile "message" dell'ultimo oggetto dell'array messages;
 
         - ALTRIMENTI: stampare una stringa con scritto "Nessun messaggio".
+
+    - Richiamare la Funzione getLastMessage(contact) nel container dell'ultimo messaggio inviato (contact-col).
+
+
+2.2 - Visualizzazione ora nella lista dei contatti e data attuale nei messaggi delle chat
+
+    - Inserire Luxon CDN;
+
+    - Creare la funzione dateTime() : Funzione che recupera la data attuale con Luxon;
+
+    - Richiamare la funzione dateTime() nella funzione newMessage() e autoMessage();
+
+    - Creare la funzione getLastDate(contact);
+
+    - Richiamare la Funzione getLastDate(contact) nel container della data dell'ultimo messaggio (contact-col).
