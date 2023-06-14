@@ -25,6 +25,8 @@ createApp({
                 show    : false,
             },
 
+            // ULTIMO MESSAGGIO DI OGNI CONTATTO
+
             // CONTACTS ARRAY
             contacts: [
                 {
@@ -306,6 +308,30 @@ createApp({
         deleteMessage(index){
             // CANCELLO IL MESSAGGIO CLICCATO TRAMITE LA FUNZIONE SPLICE
             this.contacts[this.activeChat].messages.splice(index, 1);
-        }
+        },
+
+        // FUNZIONA CHE STAMPA IL TESTO DELL'ULTIMO MESSAGGIO DELL'ARRAY MESSAGES DI OGNI CONTATTO
+        getLastMessage(contact) {
+            
+            // RECUPERO L'ARRAY MESSAGES DEL CONTATTO ATTUALE
+            const messages = contact.messages;
+
+            // CONTROLLO SE L'ARRAY MESSAGES NON è VUOTO
+            if (messages.length > 0) {
+
+                // RECUPERO L'ULTIMO OGGETTO DELL'ARRAY MESSAGES
+                const lastMessage = messages[messages.length - 1];
+                
+                if(lastMessage.status === 'sent'){
+                    // STAMPO LA VARIABILE "MESSAGE" DELL'ULTIMO OGGETTO DELL'ARRAY MESSAGES
+                    return `✓ ${lastMessage.message}`;
+                }
+
+                // STAMPO LA VARIABILE "MESSAGE" DELL'ULTIMO OGGETTO DELL'ARRAY MESSAGES
+                return lastMessage.message;
+            }
+            // SE L'ARRAY MESSAGES è VUOTO RITORNO UNA STRINGA
+            return 'Nessun messaggio';
+        },
     }
 }).mount('#app'); // COLLEGO L'APP VUE.JS AL DOM HTML

@@ -175,3 +175,22 @@ SOLUZIONE MILESTONE 5:
         - Usare la funzione splice(index, 1) sul Messaggio Cliccato per cancellarlo;
 
     - Richiamare la funzione deleteMessage(index) con @click sul container di "dropdown-delete".
+
+
+2.1 - (Visualizzazione ultimo messaggio inviato/ricevuto nella lista dei contatti)
+
+    - Creare la Funzione getLastMessage(contact):
+
+        - Inserire dentro una variabile l'array messages del contatto attuale;
+
+        - ? SE l'array messages NON è VUOTO, ALLORA:
+
+            - Recuperare l'ultimo oggetto dell'array messages;
+
+            - ? SE la Variabile "status" dell'ultimo oggetto dell'array messages è UGUALE a "sent":
+
+                - Stampare (return) "✓" + la Variabile "message" dell'ultimo oggetto dell'array messages;
+
+            - Stampare (return) la Variabile "message" dell'ultimo oggetto dell'array messages;
+
+        - ALTRIMENTI: stampare una stringa con scritto "Nessun messaggio".
