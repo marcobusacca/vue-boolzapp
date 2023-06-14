@@ -367,6 +367,10 @@ body{
         .contact-selected{
             background-color: rgba(128, 128, 128, 0.189);
         }
+
+        .contact-col:hover{
+            border: 2px solid rgb(0, 0, 0);
+        }
     /* FINE CONTACT SELECTED */
 
     /* FONT WEIGHT */
