@@ -315,7 +315,7 @@ createApp({
         },
 
         // FUNZIONA CHE STAMPA IL TESTO DELL'ULTIMO MESSAGGIO DELL'ARRAY MESSAGES DI OGNI CONTATTO
-        getLastMessage(contact) {
+        getLastMessage(contact){
 
             // RECUPERO L'ARRAY MESSAGES DEL CONTATTO ATTUALE
             const messages = contact.messages;
