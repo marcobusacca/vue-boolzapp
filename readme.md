@@ -125,3 +125,25 @@ SOLUZIONE MILESTONE 4:
             - ALTRIMENTI : - Settare la variabile visible del contatto su FALSE;
 
     - Richiamare la funzione searchFilter() con v-on:input nell'input per la ricerca di un contatto.
+        
+
+/******************************************************************************************************/
+
+MILESTONE 5:
+
+    1 - Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette di cancellare il messaggio selezionato;
+    
+    2 - Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti.
+
+
+SOLUZIONE MILESTONE 5:
+
+1
+
+    - Creare la struttura statica del menu a tendina;
+
+    - Inserire dentro il menu a tendina la voce "Cancella Messaggio";
+
+    - Creare la funzione deleteMessage(index):
+
+        - Usare la funzione splice(index, 1) sul Messaggio Cliccato per cancellarlo.
