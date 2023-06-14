@@ -191,6 +191,6 @@ SOLUZIONE MILESTONE 5:
 
                 - Stampare (return) "✓" + la Variabile "message" dell'ultimo oggetto dell'array messages;
 
-            - Stampare (return) la Variabile "message" dell'ultimo oggetto dell'array messages;
+            - ALTRIMENTI: Stampare (return) la Variabile "message" dell'ultimo oggetto dell'array messages;
 
         - ALTRIMENTI: stampare una stringa con scritto "Nessun messaggio".
